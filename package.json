@@ -1,0 +1,22 @@
+{
+  "name": "newproject",
+  "version": "0.0.1",
+  "description": "new cool project",
+  "main": "app.js",
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "5a6e0d375edae2913077497c364bcfcd6d313e44",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib": "~0.6.1",
+    "grunt-bower-hooks": "~0.3.0",
+    "grunt-bower-requirejs": "~0.4.1"
+  },
+  "dependencies": {
+    "grunt-contrib": "~0.6.1",
+    "grunt-bower-requirejs": "~0.4.1",
+    "grunt-contrib-livereload": "~0.1.2"
+  }
+}
