@@ -1,10 +1,8 @@
 require.config({
 	"paths": {
 		"jquery": "vendor/jquery/jquery",
-		"backbone": "vendor/backbone",
-		"underscore": "underscore-amd/underscore",
-		"backbone-amd": "vendor/backbone-amd",
-		"underscore-amd": "vendor/underscore-amd",
+		"underscore": "vendor/underscore-amd/underscore",
+		"backbone": "vendor/backbone-amd/backbone",
 		"marionette": "vendor/marionette/lib/backbone.marionette"
 	}
 });
