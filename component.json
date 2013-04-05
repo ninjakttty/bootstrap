@@ -7,10 +7,10 @@
     "components"
   ],
   "dependencies": {
-    "jquery": "~1.9.1",
-    "requirejs": "~2.1.5",
-    "underscore": "~1.4.4",
-    "backbone.marionette": "~1.0.2"
+    "jquery": null,
+    "requirejs": null,
+    "underscore": null,
+    "backbone.marionette": null
   },
-  "main": "moo.js"
+  "main": "main.js"
 }
