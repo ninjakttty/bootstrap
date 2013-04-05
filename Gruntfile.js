@@ -61,7 +61,8 @@ module.exports = function(grunt) {
     },
     bower: {
       target: {
-        rjsConfig: 'scripts/main.js'
+        rjsConfig: 'public/scripts/main.js',
+        baseUrl: '/scripts/vendor'
       }
     }
   });
