@@ -28,6 +28,13 @@ module.exports = function(grunt) {
         src: ['lib/**/*.js', 'test/**/*.js']
       }
     },
+    less: {
+      development: {
+        files: {
+          "public/stylesheets/less.css": "assets/less/main.less"
+        }
+      }
+    },
     server: {
       port: 3000,
       app: "public",
@@ -42,10 +49,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-develop');
-  // grunt.loadNpmTasks('grunt-bower-requirejs');
-  // grunt.loadNpmTasks('grunt-contrib-livereload');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadTasks('tasks');
 
 
   // Default task.
