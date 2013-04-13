@@ -18,6 +18,7 @@
     "express-livereload": "0.0.24",
     "bower": "~0.8.6",
     "grunt-develop": "0.0.2",
-    "livereload": "~0.3.0"
+    "livereload": "~0.3.0",
+    "grunt-contrib-less": "~0.5.0"
   }
 }
