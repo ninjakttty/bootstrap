@@ -1,5 +1,10 @@
 require.config({
-	"paths": {},
+	"paths": {
+		"backbone": "/scripts/vendor/backbone/backbone",
+		"backbone.marionette": "/scripts/vendor/backbone.marionette/lib/backbone.marionette",
+		"jquery": "/scripts/vendor/jquery/jquery",
+		"underscore": "/scripts/vendor/underscore/underscore"
+	},
 	"shim": {
 		"backbone": {
 			"deps": [
