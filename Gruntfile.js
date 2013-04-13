@@ -44,8 +44,8 @@ module.exports = function(grunt) {
 
   grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-develop');
-  grunt.loadNpmTasks('grunt-bower-requirejs');
-  grunt.loadNpmTasks('grunt-contrib-livereload');
+  // grunt.loadNpmTasks('grunt-bower-requirejs');
+  // grunt.loadNpmTasks('grunt-contrib-livereload');
 
 
   // Default task.
