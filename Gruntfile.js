@@ -5,24 +5,30 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n' + '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' + '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' + ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+    bower: {
+      target: {
+        rjsConfig: 'public/scripts/main.js',
+        baseUrl: '/scripts/vendor'
+      }
+    },
     jshint: {
       options: {
+        boss: true,
+        browser: true,
         curly: true,
-        force: true,
+        devel: true,
         eqeqeq: true,
+        eqnull: true,
+        force: true,
+        globals: {},
         immed: true,
+        jquery: true,
         latedef: true,
         newcap: true,
         noarg: true,
         sub: true,
         undef: true,
         unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        jquery: true,
-        devel: true,
-        globals: {},
         "predef" : [
             "define",
             "require"
@@ -45,6 +51,12 @@ module.exports = function(grunt) {
         }
       }
     },
+    parallel: {
+      assets: {
+        grunt: true,
+        tasks: ['server', 'watch']
+      }
+    },
     server: {
       port: 3000,
       app: "public",
@@ -59,18 +71,6 @@ module.exports = function(grunt) {
       jshint: {
         files: 'public/scripts/**/*js',
         tasks: ['jshint']
-      }
-    },
-    parallel: {
-      assets: {
-        grunt: true,
-        tasks: ['server', 'watch']
-      }
-    },
-    bower: {
-      target: {
-        rjsConfig: 'public/scripts/main.js',
-        baseUrl: '/scripts/vendor'
       }
     }
   });
