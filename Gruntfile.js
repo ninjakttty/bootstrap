@@ -50,6 +50,12 @@ module.exports = function(grunt) {
         tasks: ['less']
       }
     },
+    parallel: {
+      assets: {
+        grunt: true,
+        tasks: ['server', 'watch']
+      }
+    },
     bower: {
       target: {
         rjsConfig: 'public/scripts/main.js',
@@ -61,12 +67,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-develop');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-parallel');
+
   grunt.loadTasks('tasks');
 
 
   // Default task.
-  grunt.registerTask('default', ['bower']);
+  grunt.registerTask('default', ['startDev']);
 
-  grunt.registerTask('moo', ['server', 'watch']);
+  grunt.registerTask('startDev', ['bower', 'less', 'parallel']);
 
 };
