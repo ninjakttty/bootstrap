@@ -30,6 +30,9 @@ module.exports = function(grunt) {
     },
     less: {
       development: {
+        options: {
+          dumpLineNumbers: "all"
+        },
         files: {
           "public/stylesheets/less.css": "assets/less/main.less"
         }
@@ -40,6 +43,12 @@ module.exports = function(grunt) {
       app: "public",
       livereload: true,
       openBrowser: "Google Chrome Canary" // Google Chrome Canary, Google Chrome, Safari, Firefox , or false
+    },
+    watch: {
+      less: {
+        files: 'assets/less/**/*less',
+        tasks: ['less']
+      }
     },
     bower: {
       target: {
@@ -57,5 +66,7 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['bower']);
+
+  grunt.registerTask('moo', ['server', 'watch']);
 
 };
