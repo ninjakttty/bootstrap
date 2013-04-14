@@ -8,6 +8,7 @@ module.exports = function(grunt) {
     jshint: {
       options: {
         curly: true,
+        force: true,
         eqeqeq: true,
         immed: true,
         latedef: true,
@@ -19,10 +20,16 @@ module.exports = function(grunt) {
         boss: true,
         eqnull: true,
         browser: true,
-        globals: {}
+        jquery: true,
+        devel: true,
+        globals: {},
+        "predef" : [
+            "define",
+            "require"
+        ]
       },
       gruntfile: {
-        src: 'Gruntfile.js'
+        src: ['public/scripts/**/*js', '!public/scripts/vendor/**']
       },
       lib_test: {
         src: ['lib/**/*.js', 'test/**/*.js']
@@ -48,6 +55,10 @@ module.exports = function(grunt) {
       less: {
         files: 'assets/less/**/*less',
         tasks: ['less']
+      },
+      jshint: {
+        files: 'public/scripts/**/*js',
+        tasks: ['jshint']
       }
     },
     parallel: {
@@ -67,6 +78,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-develop');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-parallel');
   grunt.loadTasks('tasks');
 
