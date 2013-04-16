@@ -8,21 +8,19 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "gitHead": "",
-  "devDependencies": {
-    "grunt": "~0.4.1",
+  "devDependencies": {},
+  "dependencies": {
     "grunt-bower-hooks": "~0.3.0",
     "grunt-contrib-less": "~0.5.0",
-    "grunt-parallel": "~0.1.0"
-  },
-  "dependencies": {
+    "grunt-parallel": "~0.1.0",
     "requirejs": "~2.1.5",
     "express": "~3.1.1",
     "express-livereload": "0.0.24",
     "bower": "~0.8.6",
     "grunt-develop": "0.0.2",
     "livereload": "~0.3.0",
-    "grunt-contrib-less": "~0.5.0",
     "grunt-contrib-watch": "~0.3.1",
-    "grunt-contrib-jshint": "~0.4.3"
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt": "git://github.com/ninjakttty/grunt.git"
   }
 }
