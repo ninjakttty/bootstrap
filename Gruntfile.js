@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       }
     },
     parallel: {
-      tasks: ['server', 'watch']
+      tasks: ['server', 'nodemon', 'watch']
     },
     server: {
       port: 3000,
@@ -68,12 +68,25 @@ module.exports = function(grunt) {
         files: 'public/scripts/**/*js',
         tasks: ['jshint']
       }
-    }
+    },
+    nodemon: {
+        development: {
+          options: {
+            file: 'server/app.js',
+            ignoredFiles: ['README.md', 'node_modules/**'],
+            watchedExtensions: ['js', 'coffee'],
+            watchedFolders: ['server'],
+            debug: true,
+            delayTime: 1
+          }
+        }
+      }
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadTasks('tasks');
 
   grunt.registerTask('startDev', ['bower', 'less', 'parallel']);

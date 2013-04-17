@@ -9,7 +9,9 @@
   "license": "BSD",
   "readmeFilename": "README.md",
   "gitHead": "",
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-nodemon": "0.0.0"
+  },
   "dependencies": {
     "grunt-bower-hooks": "~0.3.0",
     "grunt-contrib-less": "~0.5.0",
@@ -21,6 +23,7 @@
     "grunt-contrib-watch": "~0.3.1",
     "grunt-contrib-jshint": "~0.4.3",
     "grunt": "~0.4.1",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "restify": "~2.4.1"
   }
 }
