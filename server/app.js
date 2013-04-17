@@ -5,6 +5,11 @@ server.use(function(req, res, next) {
 	return next();
 });
 
+server.use(function(req, res, next) {
+	 console.log("restify:", req.url );
+	return next();
+});
+
 var router = require('./routes.js')(server);
 server.listen(8080, function() {
 	console.log('%s listening at %s', server.name, server.url);
