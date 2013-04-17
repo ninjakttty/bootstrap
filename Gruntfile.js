@@ -51,11 +51,8 @@ module.exports = function(grunt) {
         }
       }
     },
-    parallel: {
-      assets: {
-        grunt: true,
+    parallel:{
         tasks: ['server', 'watch']
-      }
     },
     server: {
       port: 3000,
@@ -79,7 +76,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-parallel');
   grunt.loadTasks('tasks');
 
   grunt.registerTask('startDev', ['bower', 'less', 'parallel']);
