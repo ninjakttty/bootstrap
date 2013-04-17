@@ -2,6 +2,10 @@ define(['backbone'], function(Backbone) {
 	var App = Backbone.View.extend({
 		initialize: function(){
 			console.log( 'initialize' );
+			$.get('http://localhost:8080/hello', function(data, textStatus, xhr) {
+				 console.log( data );
+			});
+
 			this.render();
 		},
 		render: function(){
