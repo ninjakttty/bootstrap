@@ -4,7 +4,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n' + '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' + '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' + ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %>\n' + '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' + '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %>;' + ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     bower: {
       target: {
         rjsConfig: 'public/scripts/main.js',
@@ -29,10 +29,9 @@ module.exports = function(grunt) {
         sub: true,
         undef: true,
         unused: true,
-        "predef" : [
-            "define",
-            "require"
-        ]
+        "predef": [
+          "define",
+          "require"]
       },
       gruntfile: {
         src: ['public/scripts/**/*js', '!public/scripts/vendor/**']
@@ -51,8 +50,8 @@ module.exports = function(grunt) {
         }
       }
     },
-    parallel:{
-        tasks: ['server', 'watch']
+    parallel: {
+      tasks: ['server', 'watch']
     },
     server: {
       port: 3000,
@@ -72,7 +71,6 @@ module.exports = function(grunt) {
     }
   });
 
-  // grunt.loadNpmTasks('grunt-develop');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');

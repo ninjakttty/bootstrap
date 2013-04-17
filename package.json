@@ -2,6 +2,7 @@
   "name": "bootstrap",
   "version": "0.0.1",
   "description": "Bootstrap",
+  "homepage": "https://github.com/ninjakttty/bootstrap",
   "main": "app.js",
   "repository": "",
   "author": "Yuri A. Parsons",
