@@ -6,9 +6,9 @@ define(['backbone'], function(Backbone) {
 		},
 		render: function(){
 			console.log( 'render' );
-			var template = '<div class="row"><div class="col-span-12"><h1>Hello World</h1></div></div>'
+			var template = '<div class="row"><div class="col-span-12"><h1>Hello World</h1></div></div>';
 			this.$el.html(template);
-			return this
+			return this;
 		}
 	});
 
