@@ -80,16 +80,22 @@ module.exports = function(grunt) {
             delayTime: 1
           }
         }
-      }
+      },
+      todos: {
+        options: {},
+        src: ['server/**/*js', 'public/scripts/**/*js', '!public/scripts/vendor/**']
+      },
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-todos');
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadTasks('tasks');
 
-  grunt.registerTask('startDev', ['bower', 'less', 'parallel']);
+  grunt.registerTask('startDev', ['todo', 'bower', 'less', 'parallel']);
 
   // Default task.
   grunt.registerTask('default', ['startDev']);

@@ -5,7 +5,9 @@ server.use(function(req, res, next) {
 	return next();
 });
 
+
 server.use(function(req, res, next) {
+	//FIXME we should log to something better
 	 console.log("restify:", req.url );
 	return next();
 });

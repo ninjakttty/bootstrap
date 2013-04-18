@@ -10,7 +10,9 @@
   "readmeFilename": "README.md",
   "gitHead": "",
   "devDependencies": {
-    "grunt-nodemon": "0.0.0"
+    "grunt-nodemon": "0.0.0",
+    "grunt": "~0.4.1",
+    "grunt-todos": "~0.1.0"
   },
   "dependencies": {
     "grunt-bower-hooks": "~0.3.0",
