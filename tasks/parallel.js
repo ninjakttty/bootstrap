@@ -11,8 +11,8 @@ module.exports = function(grunt) {
         args: task
       };
       var child = grunt.util.spawn(options);
-      //child.stdout.pipe(process.stdout);
-      //child.stderr.pipe(process.stderr);
+      child.stdout.pipe(process.stdout);
+      child.stderr.pipe(process.stderr);
     });
 
   });
