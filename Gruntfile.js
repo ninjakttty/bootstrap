@@ -67,6 +67,10 @@ module.exports = function(grunt) {
       jshint: {
         files: 'public/scripts/**/*js',
         tasks: ['jshint']
+      },
+      handlebars: {
+        files: 'assets/templates/**/*hbs',
+        tasks: ['handlebars']
       }
     },
     nodemon: {
@@ -85,6 +89,18 @@ module.exports = function(grunt) {
         options: {},
         src: ['server/**/*js', 'public/scripts/**/*js', '!public/scripts/vendor/**']
       },
+
+      handlebars: {
+        dist: {
+          options: {
+            amd: true,
+            handlebarPath: '/scripts/vendor/require-handlebars-plugin/Handlebars.js'
+          },
+          files: {
+            "public/scripts/templates.js": ["assets/templates/**/*.hbs"]
+          }
+        }
+      }
 
   });
 
