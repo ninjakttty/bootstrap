@@ -16,3 +16,4 @@ node_modules
 public/scripts/vendor
 public/stylesheets
 dist
+public/scripts/templates.js
