@@ -10,7 +10,7 @@ define(['backbone', 'templates'], function(Backbone, Handlebars) {
 		},
 		render: function(data){
 			console.log( 'render' );
-			var template = Handlebars['assets/templates/main.hbs']({data: data});
+			var template = Handlebars['main.hbs']({data: data});
 			this.$el.html(template);
 			return this;
 		}

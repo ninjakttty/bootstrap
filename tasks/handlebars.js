@@ -104,6 +104,7 @@ module.exports = function(grunt) {
         } else {
           filename = processName(filepath);
           if (options.namespace !== false) {
+             filename = filename.replace('assets/templates/', '');
             templates.push(nsInfo.namespace+'['+JSON.stringify(filename)+'] = '+compiled+';');
           } else {
             templates.push(compiled);
