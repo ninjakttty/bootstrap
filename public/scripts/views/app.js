@@ -1,4 +1,4 @@
-define(['backbone'], function(Backbone) {
+define(['backbone', 'templates'], function(Backbone, Handlebars) {
 	var App = Backbone.View.extend({
 		initialize: function(){
 			var self = this;
@@ -10,7 +10,7 @@ define(['backbone'], function(Backbone) {
 		},
 		render: function(data){
 			console.log( 'render' );
-			var template = '<div class="row"><div class="col-span-12"><h1>'+data+'</h1></div></div>';
+			var template = Handlebars['assets/templates/main.hbs']({data: data});
 			this.$el.html(template);
 			return this;
 		}
